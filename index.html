@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>TechCon 2025 — Event Schedule</title>
+
+    <link rel="manifest" href="/manifest.json" />
+    <link rel="icon" href="/images/icon.png" />
+    <meta name="theme-color" content="#0f172a" />
+
+    <!-- Google Fonts -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Main CSS -->
+    <link rel="stylesheet" href="styles/main.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="container header-inner">
+        <div class="brand">
+          <h1>TechCon 2025</h1>
+          <p class="tagline">Event Schedule — Nov 20–22, 2025</p>
+        </div>
+
+        <div class="controls">
+          <div class="search">
+            <label for="search" class="visually-hidden">Search events</label>
+            <input
+              id="search"
+              type="search"
+              placeholder="Search events, speakers or topics…"
+            />
+          </div>
+
+          <div
+            class="filters"
+            role="tablist"
+            aria-label="Filter events by type"
+          >
+            <button
+              class="filter-btn active"
+              data-type="All"
+              role="tab"
+              aria-selected="true"
+            >
+              All
+            </button>
+            <button class="filter-btn" data-type="Keynote" role="tab">
+              Keynotes
+            </button>
+            <button class="filter-btn" data-type="Talk" role="tab">
+              Talks
+            </button>
+            <button class="filter-btn" data-type="Workshop" role="tab">
+              Workshops
+            </button>
+            <button class="filter-btn" data-type="Panel" role="tab">
+              Panels
+            </button>
+            <button class="filter-btn" data-type="Social" role="tab">
+              Social
+            </button>
+          </div>
+
+          <button
+            id="theme-toggle"
+            class="theme-toggle"
+            aria-pressed="false"
+            title="Toggle theme"
+          >
+            🌙
+          </button>
+        </div>
+      </div>
+
+      <div id="announce" class="sr-only" aria-live="polite"></div>
+    </header>
+
+    <main class="container">
+      <section
+        id="event-container"
+        class="grid"
+        aria-live="polite"
+        aria-atomic="true"
+      >
+        <!-- Event cards injected here -->
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container">
+        <p>© 2025 TechCon — Built with <small>Issathul ILMA ❤️</small></p>
+      </div>
+    </footer>
+
+    <!-- Main JS -->
+    <script src="scripts/main.js" defer></script>
+  </body>
+</html>
